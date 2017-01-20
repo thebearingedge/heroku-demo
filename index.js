@@ -1,9 +1,11 @@
 var express = require('express')
 var bodyParser = require('body-parser')
 
+var events = []
+
 var app = express()
 
-var events = []
+app.use(bodyParser.json())
 
 app.get('/', function (req, res) {
   res.json(events)
